@@ -1,0 +1,38 @@
+HTML
+
+HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto) é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.
+
+HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo. Um documento é visto como um conjunto de eventos concorrentes dependentes de tempo (como áudio, vídeo, etc.), conectados por hiperligações. O padrão é independente de outros padrões de processamento de texto em geral.
+
+História
+
+Tim Berners-Lee em 2008.
+
+Tim Berners-Lee (físico britânico) criou o HTML original (e outros protocolos associados como o HTTP) em uma estação NeXTcube usando o ambiente de desenvolvimento NeXTSTEP. Na época a linguagem não era uma especificação, mas uma coleção de ferramentas para resolver um problema de Tim: a comunicação e disseminação das pesquisas entre ele e seu grupo de colegas. Sua solução, combinada com a então emergente internet pública (que tornar-se-ia a Internet) ganhou atenção mundial.
+
+
+Várias versões HTML foram publicadas:
+
+Versão	       Ano
+HTML	       1991
+HTML 2.0	   1995
+HTML 3.2	   1997
+HTML 4.01	   1999
+XHTML	       2000
+HTML5	       2014
+HTML5.1	       2016 e 2017 (2ª ed.)
+HTML5.2	       2017
+
+
+MARCAS (tags)
+
+Ver artigo principal: Tabela de cores
+Todo documento HTML possui marcadores (do inglês: tags), palavras entre parênteses angulares (chevron) (< e >); esses marcadores são os comandos de formatação da linguagem. Um elemento é formado por um nome de marcador (tag), atributos, valores e filhos (que podem ser outros elementos ou texto). Os atributos modificam os resultados padrões dos elementos e os valores caracterizam essa mudança. Exemplo de um elemento simples (não possui filhos):
+
+<hr />
+Exemplo de um elemento composto (possui filhos):
+
+<a href="http://pt.wikipedia.org/">Wikipédia</a>
+<a> é o marcador de abertura
+</a> é o marcador de fechamento
+href é o atributo onde é definido a url, que será acessada ao clicar no link.
