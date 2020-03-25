@@ -1,0 +1,63 @@
+#elem1{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  margin-bottom: 30px; 
+  /*padding-top: 5px;
+  padding-left: 5px;*/
+  
+  /* top bottom right left*/
+  padding: 5px 5px 5px 5px;
+  /*todos terãao o valor 5px*/
+  padding 5px; 
+}
+
+#elem2{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  margin-left: 10px; 
+}
+
+#elem3{
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+ /* margin-top: 5px;
+   margin-left: 5px;*/
+}
+
+#elem4{
+  width: 45px;
+  height: 45px;
+  background-color: #0f0;
+  /*margin-left: 5px;*/
+}
+
+#elem5{
+  position: absolute;
+  top: 0px;
+  left: 40px;
+}
+
+#elem6{
+  position: relative;
+  top: 100px;
+  left: 40px;
+}
+
+
+.circle{ 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00f;
+}
+
+
+#elem7{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #0f0;
+}
