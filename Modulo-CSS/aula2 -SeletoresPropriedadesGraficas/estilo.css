@@ -1,0 +1,67 @@
+/*criando fontes com base no meu
+servidor*/ 
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+/* https://fonts.google.com/ */
+
+
+
+#elem2{
+  border: 2px outset ;
+}
+
+#elem3{
+  background-color: rgb(100, 200, 0);
+  border-radius: 10px;
+  width: 40%;
+  height: 100px;
+}
+
+#elem4{
+  background-image: url("https://ca.bbcollab.com/collab/api/saturn/ultra-ca-prod-saturn28/contentDeprecated/0c151cb42a484a1ba289e5e9a60936e4.jpg");
+  
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+
+#elem5{
+  
+ /* background-image: linear-gradient(red, yellow);*/
+  
+  background-image: radial-gradient(red, yellow, green);
+  width: 100px;
+  height: 100px;
+}
+
+#elem6{
+  width: 50%;
+  height: 400px;
+  
+  color: #444;
+  font-family: 'Anton', sans-serif;
+  font-size: 10px;
+  /*left, right, center, justfy*/
+  text-align: left; 
+}
+
+.italictext{
+  font-style: italic;
+  /*lighter, bold, normal, 900*/
+  font-weight: bold;
+}
+
+/* seletor:hover  
+quando o mouse passar pelo 
+elemento*/
+.italictext:hover{
+  font-style: normal;
+  color: #f00;
+}
