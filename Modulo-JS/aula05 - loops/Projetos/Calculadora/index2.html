@@ -1,0 +1,74 @@
+<html>
+<head>
+<script>
+
+alert("Olá tudo bom?! Vamos calcular!");
+
+
+var op = window.prompt("Qual operação deseja fazer: soma, subtração, multiplicação ou divisão");	
+var resultado = 0;
+var qtd = Number(window.prompt("Quantas números deseja para fazer a operação?"));
+
+if(op == "soma"){
+	for( var i = 0; i < qtd; i++){
+		var num1 = Number( window.prompt("Informe o número "+ i) );
+		
+		if ( !isNaN(num1) ){
+			resultado += num1 
+		}else{
+			alert("Atenção: Informe um número");
+			i--;
+			continue;
+		}
+	}
+	
+}else if (op == "subtração")
+	for( var i = 0; i < qtd; i++){
+		var num1 = Number( window.prompt("Informe o número "+ i) );
+		if ( !isNaN(num1) ){
+			resultado -= num1 
+		}else{
+			alert("Atenção: Informe um número");
+			i--;
+			continue;
+		}
+	}
+else if (op == "multiplicação")
+	for( var i = 0; i < qtd; i++){
+		var num1 = Number( window.prompt("Informe o número "+ i) );
+		if ( !isNaN(num1) ){
+			resultado *= num1 
+		}else{
+			alert("Atenção: Informe um número");
+			i--;
+			continue;
+		}
+	}
+else if (op == "divisão")
+	for( var i = 0; i < qtd; i++){
+		var num1 = Number( window.prompt("Informe o número "+ i) );
+		if ( !isNaN(num1) ){
+			resultado /= num1 
+		}else{
+			alert("Atenção: Informe um número");
+			i--;
+			continue;
+		}
+	}
+else
+	resultado = "Operação Inexistente";
+	
+alert("RESULTADO " + resultado);
+	
+	
+	
+	
+		
+
+
+</script>
+</head>
+<body>
+
+</body>
+<html>

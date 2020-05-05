@@ -1,0 +1,51 @@
+<html>
+<head>
+	<script>
+		
+		//perdeu o valor
+		//window.prompt( "informe um valor!" );
+		
+		
+		/** ENTRADA **/
+		//input 
+		var a = window.prompt( "informe outro valor!" );
+		console.log( a);	
+		
+		//confirmação ok ou cancel
+		b = window.confirm( "O valor informado foi um número?" );
+		
+		/** SAIDA **/
+		
+		//Alert
+		alert(b);
+		
+		
+		//Console
+		if(b){
+			//info
+			console.info("Foi informado um número!");
+			//atenção
+			console.warn("Vamos tentar converter!");
+		}else{
+			//um erro
+			console.error("Não foi informado um número!");
+		}
+		
+		//mensagem + contador de quantas vezes foi exibida
+		console.count("testando a qtd de mensagem");
+		console.count("testando a qtd de mensagem");
+		console.count("testando a qtd de mensagem");
+		console.count("testando a qtd de mensagem");
+		
+		console.assert( (a > 0) , 'Lamento, o número é zero ou negativo');
+		
+		//No documento
+		document.write(" O valor de a é  "+ a);
+		
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>

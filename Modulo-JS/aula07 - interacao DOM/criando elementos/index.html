@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+
+.mydiv{
+	width: 200px;
+	height: 300px;
+	background-color: #aaa;
+	border: 1px solid #00;
+}
+</style>
+</head>
+<body>
+
+
+<script>
+	
+	//criando um nó
+	var elem01 = document.createElement("div");
+	
+	var body = document.getElementsByTagName("body")[0];
+	//inserindo como filho
+	
+	body.appendChild(elem01);
+	
+	//manipulando o que foi criado
+	elem01.id= "div01";
+	elem01.innerHTML = "<p> Hello World! </p> ";
+	elem01.setAttribute("class", "mydiv");
+	elem01.style.opacity = 0.6;
+	
+	//inserido depois
+	body.appendChild(document.createTextNode("apenas texto"));
+	
+	//copiando um nó
+	var copy = document.getElementById("div01").cloneNode();
+	body.appendChild(copy);
+	
+	var copy = document.getElementById("div01").cloneNode(true);
+	body.appendChild(copy);
+	
+	
+	//n.parentNode.removeChild(n);
+	
+	
+</script>
+
+
+</body>
+<html>

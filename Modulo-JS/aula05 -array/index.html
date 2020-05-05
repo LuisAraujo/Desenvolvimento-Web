@@ -1,0 +1,77 @@
+<html>
+<head>
+<script>
+
+var a = [];
+var b = Array();
+var c = [1,2,3,4,5,6,7,8,9,10];
+
+//Array é dinâmico
+
+console.log(a.length);
+
+a.push(1);
+a.push(2);
+a.push(3);
+a.push(4);
+
+console.log("tamano de a " +a.length);
+
+//usando referência
+var c = a;
+
+console.log("removendo c -> " + c.pop() );
+
+console.log("tamano de a " + a.length);
+
+//copiando
+var d = a.slice(0, a.length);
+
+console.log("tamanho de d " + d.length);
+
+console.log("removendo de d -> " + d.pop() );
+
+console.log("tamano de a " + a.length);
+
+
+for(var i = 0 ; i < a.length; i++)
+	console.log("A [" + i + "]  ->  " + a[i]);
+
+console.log("tamano de c " + c.length);
+	
+for(var index in c)
+	console.log("C [" + index + "]  ->  " + c[index]);
+
+	
+console.log("tamanho de d " + d.length);	
+
+d.forEach( function(item, index){
+	console.log("D [" + index + "]  ->  " + item);
+});
+	
+//2 dimensoes (matrix)
+var e = [ [],  [] ];
+	
+//elemento indefinido no index 1;
+var f = [1, , 2];
+
+//array suportam diversos tipos
+var g = [1, true, "str", 10 + 20];
+
+
+//deletando elementos do array, isso é diferente de remover com pop
+delete a[0]
+for(var i = 0 ; i < a.length; i++)
+	console.log("A [" + i + "]  ->  " + a[i]);
+
+a.unshift(100);
+
+for(var i = 0 ; i < a.length; i++)
+	console.log("A [" + i + "]  ->  " + a[i]);
+
+</script>
+</head>
+<body>
+
+</body>
+<html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+	
+	window.onload = function(){
+	
+		var div01 = document.getElementById("div01");
+		var inp01 = document.getElementById("inp01");
+		var bt01 = document.getElementById("bt01");
+		
+		div01.onclick = function(){ alert("Div Clicado"); }
+		bt01.addEventListener("click", function() { alert("Bt Clicado"); }, false);
+		inp01.onchange = function(){ alert("Inp modificado"); }
+		inp01.onrelease = function(){console.log("inp01 on mouse")};
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<div id="div01">
+		<p> Hello World! </p>
+	</div>
+
+	<input id="inp01" style="background-color: #ddd" class="mydiv" />
+		
+	
+	<button id="bt01"> Botão </button>
+
+</body>
+<html>

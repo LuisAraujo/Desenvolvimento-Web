@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+
+alert("Olá tudo bom?! Vamos calcular!");
+
+var qtd = Number(window.prompt("Quantas operações deseja fazer?"));
+
+for( var i = 0; i < qtd; i++){
+
+	var op = window.prompt("Qual operação deseja fazer: soma, subtração, multiplicação ou divisão");
+	var num1 = window.prompt("Informe o primeiro número");
+	var num2 = window.prompt("Informe o segundo número");
+	var resultado = 0;
+
+	if ( !isNaN(num1) && !isNaN(num2) ) {
+		
+		if(op == "soma")
+			resultado = num1 + num2;
+		else if (op == "subtração")
+			resultado = num1 - num2;
+		else if (op == "multiplicação")
+			resultado = num1 * num2;
+		else if (op == "divisão")
+			resultado = num1 / num2;
+		else if (op == "resto")
+			resultado = num1 % num2;
+		else if (op == "potenciação")
+			resultado = num1 ** num2;
+		else
+			resultado = "Operação Inexistente";
+			
+		alert("RESULTADO " + resultado);
+	}else
+		alert("Algum valor informado não é um número!");
+
+}
+</script>
+</head>
+<body>
+
+</body>
+<html>

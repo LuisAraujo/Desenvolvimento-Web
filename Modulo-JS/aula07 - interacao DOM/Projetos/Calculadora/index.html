@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<style>
+.bt1{
+	width: 50px;
+	height: 40px;
+	font-size : 25px;
+	color: #000;
+	border-radius: 5px;
+	background-color: #ddd;
+	text-align: center;
+	margin: 3px;
+	float: left;
+	padding-top: 10px;
+	border-bottom: 2px solid #999;
+}
+
+.bt2{
+	width: 25px;
+	height: 20px;
+	font-size : 15px;
+	color: #000;
+	border-radius: 5px;
+	background-color: #ddd;
+	text-align: center;
+	margin: 1px;
+	float: left;
+	padding-top: 10px;
+	border-bottom: 2px solid #999;
+	
+}
+
+.bt,#bt-calc:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#display{
+	width: calc( 100% - 2px);
+	height: 40px;
+	font-size : 15px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #33ccff;
+	text-align: center;
+	margin: 1px;
+	float: left;
+	padding-top: 10px;
+	border-top: 2px solid #00ace6;
+	margin-top: 10px;
+	color: #000;
+	font-size : 20px;
+}
+
+
+#bt-calc{
+	width: calc( 100% - 2px);
+	height: 20px;
+	font-size : 15px;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #ff3300;
+	text-align: center;
+	margin: 1px;
+	float: left;
+	padding-top: 10px;
+	border-bottom: 2px solid #dd1100;
+	margin-top: 10px;
+}
+
+#container-calc{
+  width: 170px;
+  height: 320px;
+  border-radius: 5px;
+  border: 1px solid #222;
+  background-color: #222;
+  padding: 5px;
+}
+</style>
+<script>
+	disp = null;
+
+	window.onload = function(){
+		disp = document.getElementById("display");
+		bts = document.getElementsByClassName("bt");
+		enter = document.getElementById("bt-calc");
+		
+		console.log(bts);
+		
+		for(var i = 0; i <  bts.length; i++){
+			bts[i].onclick = function(){
+				disp.textContent =   disp.textContent + this.textContent;	
+			};
+		}
+		
+		
+		enter.onclick = function(){
+		
+			disp.textContent = eval( disp.textContent );
+		
+		};
+	
+	}
+</script>
+</head>
+<body>
+
+<div id="container-calc">
+<div id="display"></div>
+<div class = "bt1 bt">1</div>
+<div class = "bt1 bt">2</div>
+<div class = "bt1 bt">3</div>
+<div class = "bt1 bt">4</div>
+<div class = "bt1 bt">5</div>
+<div class = "bt1 bt">6</div>
+<div class = "bt1 bt">7</div>
+<div class = "bt1 bt">8</div>
+<div class = "bt1 bt">9</div>
+
+
+<div class = "bt2 bt">+</div>
+<div class = "bt2 bt">-</div>
+<div class = "bt2 bt">*</div>
+<div class = "bt2 bt">/</div>
+<div class = "bt2 bt">(</div>
+<div class = "bt2 bt">)</div>
+<div id="bt-calc")>Enter</div>
+
+</div>
+
+
+</body>
+<html>

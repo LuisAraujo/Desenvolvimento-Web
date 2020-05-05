@@ -1,0 +1,62 @@
+<html>
+<head>
+<script>
+	//DIV01 é NULL 
+	//obtem por script
+	var div01 = document.getElementById("div01");
+	console.log(div01);
+
+</script>
+
+
+</head>
+<body>
+
+	<div id="div01" style="background-color: #ddd" width="100" class="mydiv">
+		<p> Hello World! </p>
+	</div>
+
+	<div id="div02" style="background-color: #ddd" class="mydiv">
+		<p> Olá Mundo! <p>
+	</div>
+
+<script>
+
+	//obtem por script
+	var div01 = document.getElementById("div01");
+	console.log(div01);
+	
+	//var divs = document.getElementsName("mydiv");
+	//var divs = document.getElementsByTagName("div");
+	
+	var divs = document.getElementsByClassName("mydiv");
+	console.log(divs);
+	
+	//acessando atributos
+	console.log(div01.id);
+	
+	 if (div01.hasAttribute("class"))
+		console.log( div01.getAttribute("class") );
+	
+	
+	console.log( div01.getAttribute("width"));
+	
+	div01.setAttribute("class", "ok");
+	
+	var div02 = document.getElementById("div02");
+	div02.removeAttribute("class");
+	
+
+	//add conteudo
+	console.log( div02.innerHTML );
+	console.log( div02.textContent );
+
+	
+	
+	console.log(div01.style);
+	console.log(div01.style.backgroundColor );
+	
+
+</script>
+</body>
+<html>
