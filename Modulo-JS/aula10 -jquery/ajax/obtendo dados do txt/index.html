@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="../../jquery/jquery-3.5.1.min.js"> </script>
+<script>
+
+$(document).ready( function(){
+	console.log("antes do post");
+	$.post( "teste.txt", function(data){
+		console.log("no post -> " + data);
+	});
+	console.log("depois do post");
+}); 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<!-- até aqui é HTML -->
+<script>
+	
+	resp = window.confirm("Vamos calcular?");
+	hist = [];
+	while(resp){
+	
+		var op = window.prompt("Informe a operacao: soma, subtração, multiplicação,	divisão, resto, potenciação.") 
+		
+		
+		var n1 = Number( window.prompt("Informe o n1") );
+		var n2 =  Number( window.prompt("Informe o n2") );
+		
+		if(op == "soma")
+		resultado =  n1 + n2;
+		else if(op == "subtração")
+		resultado =  n1- n2;
+		else if(op == "multiplicação")
+		resultado=  n1 * n2;
+		else if(op == "divisão")
+		resultado =  n1 / n2;
+		else if(op == "resto")
+		resultado =  n1 % n2;
+		else if(op == "potenciação")
+		resultado =  n1 ** n2;
+		
+		alert("O RESULTADO É: " + resultado);
+		
+		hist.push(resultado);
+		
+		resp = window.confirm("Deseja continuar?");
+		
+	}
+	
+	hist.forEach( function(elem, indice){
+		document.write("Resultado "+indice + " eh " + elem );
+	});
+	
+</script>	
+</head>
+<body>
+
+</body>
+</html>

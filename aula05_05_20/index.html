@@ -1,0 +1,63 @@
+<html>
+<head>
+<!-- até aqui é HTML -->
+<style>
+
+	.b{
+		color: #f00;
+	}
+	
+</style>
+
+	
+	
+	<script>
+	
+		window.onload = function(){
+		
+			var div1 = document.getElementById("div01");
+			
+			div1.onclick = function(){
+				console.count("click na div");
+			}
+			
+			var btn1 = document.getElementById("form01");
+			
+			btn1.onsubmit = function(){
+				console.count("submit no form");
+			}
+			
+			
+			var inp1 = document.getElementById("inp01");
+			
+			inp1.addEventListener("change", function(){
+				console.count("change inp");
+			});
+			
+			inp1.onfocus = function(){
+				console.count("focus inp");
+			}
+		
+		}
+	</script>
+	
+	
+	
+</head>
+<body>
+	<div id="div01" class="mydiv">  	
+		<b>  Hello World </b>
+	</div>
+
+	<input id="inp01" value="teste"></div>
+	<form id="form01">
+		<button  id="btn01"> Enviar </button>
+	</form>
+
+
+
+
+	
+	
+</body>
+</html>

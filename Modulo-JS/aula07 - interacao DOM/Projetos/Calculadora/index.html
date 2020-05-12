@@ -1,4 +1,4 @@
-<html>
+	<html>
 <head>
 
 <style>
@@ -82,6 +82,7 @@
 	disp = null;
 
 	window.onload = function(){
+	
 		disp = document.getElementById("display");
 		bts = document.getElementsByClassName("bt");
 		enter = document.getElementById("bt-calc");
@@ -97,8 +98,15 @@
 		
 		enter.onclick = function(){
 		
-			disp.textContent = eval( disp.textContent );
-		
+		    if(enter.textContent != "Apagar"){
+				disp.textContent = eval( disp.textContent );
+				enter.textContent = "Apagar";
+			}else{
+				disp.textContent = "";
+				enter.textContent = "Enter";
+				/enter.style.backgroundColor = "#ffffff";
+			}
+			
 		};
 	
 	}
