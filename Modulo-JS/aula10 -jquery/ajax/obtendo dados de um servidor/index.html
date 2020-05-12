@@ -1,0 +1,55 @@
+<html>
+<head>
+<script src="../../jquery/jquery-3.5.1.min.js"> </script>
+<script>
+
+$(document).ready( function(){
+
+	//modo 1
+	$.ajax({
+		url: "getdata.php",
+		data: {"name" : "ok"},
+		dataType:"json" 
+	})
+	.done (function(data){
+		console.count("sucess");
+		console.log(data);
+	}).fail ( function(){
+		console.log("falha");
+	});
+	
+	//modo 2
+	$.ajax( "getdata.php")
+	.done(function(data) {
+		console.count("sucess");		
+		console.log( JSON.parse( data) );
+		
+	})
+	.fail(function() {
+		console.log("falha");
+	})
+	.always(function() {
+		console.log("completo");
+	});
+	
+	//modo 3
+	$.post("getdata.php", function(data){
+		console.count("sucess");
+		console.log( JSON.parse( data) );
+	});
+	
+	//modo 4
+	$.getJSON( "getdata.php", function(data) {
+		console.count("sucess");
+		console.log(data);
+	});
+
+
+}); 
+
+</script>
+</head>
+<body>
+<div id="resp"></div>
+</body>
+</html>

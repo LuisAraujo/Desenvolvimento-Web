@@ -5,32 +5,30 @@
 
 $(document).ready( function(){
 
-	 console.log("aaa");
-	 
-	/*$.ajax({
+	$.ajax({
+		type: "POST",
 		dataType: "json",
 		url: "data.json",
-		data: null,
-		sucess: function(data){
+	}).done( function(data){
+		console.log("sucess");
+		console.log(data);
+	}).fail( function(data){
+		console.log("fail");
 		
-			console.log("bbb");
-			
-			
-		},
-		error: function(data){
-			console.log("ccc");
-			console.log(data);
-		}
-	});
+	})
 
-
-	$.getJSON( "data.json", function( ) {
-			
-		console.log("bbb");
-
-	});*/
-
-
+/*
+	$.getJSON("data.json", function(data) {			
+		console.log("sucess");
+		console.log(data);
+	}).done( function(data){
+		console.log("sucess");
+	}).fail( function(data){
+		console.log("fail");
+		console.log(data);
+	})*/
+	
+	
 }); 
 
 </script>

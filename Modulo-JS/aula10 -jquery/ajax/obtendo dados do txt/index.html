@@ -3,9 +3,11 @@
 <script src="../../jquery/jquery-3.5.1.min.js"> </script>
 <script>
 
+//https://api.jquery.com/jquery.ajax/
+
 $(document).ready( function(){
 	console.log("antes do post");
-	$.post( "teste.txt", function(data){
+	$.get( "teste.txt", function(data){
 		console.log("no post -> " + data);
 	});
 	console.log("depois do post");

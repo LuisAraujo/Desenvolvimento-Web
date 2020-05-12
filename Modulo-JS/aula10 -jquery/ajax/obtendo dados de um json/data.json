@@ -1,8 +1,1 @@
-[ 
-{'id': '01', 'nome': 'Luis Araujo'} ,
-{'id': '02', 'nome': 'Emerson Oliveira'},
-{'id': '03', 'nome': 'Jairo Rego'},
-{'id': '04', 'nome': 'Marcos Bião'},
-{'id': '05', 'nome': 'Ana Cleyge'},
-{'id': '06', 'nome': 'Cleide Bittencourt'}
-]
+{"id": "01", "nome": "Luis Araujo" }
