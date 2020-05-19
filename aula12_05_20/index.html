@@ -1,0 +1,53 @@
+<html>
+<head>
+<script src="js/jquery-3.5.1.min.js"></script>
+
+<script>
+
+	$(document).ready(  function(){   
+		
+		$.ajax({
+		
+			url: "dado.php",
+			dataType: "json"
+			
+		}).done(function(data){
+			console.log(data);
+			
+		}).fail(function(){
+			console.log("fail");
+		});
+
+
+
+	
+	});
+
+</script>
+
+<style>
+#div01{
+	width: 100%;
+}
+#div01 div{
+
+	width: 100%;
+	background-color: #aaa;
+	border: 1px solid #000;
+	margin-bottom: 10px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+
+<div id="div01">
+
+</div>
+
+
+</body>
+</html>
