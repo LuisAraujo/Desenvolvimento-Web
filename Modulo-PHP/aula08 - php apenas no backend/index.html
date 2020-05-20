@@ -1,0 +1,114 @@
+<html>
+<head>
+	<script src="jquery/jquery-3.5.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#bt_inspessoa").click(function(){
+			  inserirPessoa( $("#inp_nomepessoa").val() ,
+			  $("#inp_idadepessoa").val() );   
+			});
+			
+			$("#bt_delpessoa").click(function(){
+				deletarPessoa( $("#inp_idpessoa").val() );
+			});
+			
+			$("#bt_getallpessoas").click(function(){
+				getAllPessoas();
+			});
+		});
+		
+		
+		function getAllPessoas(){
+		
+			$.ajax({
+					url: "Controller/Controller.php",
+					data: {"requisicao" : "getallpessoas"},
+					dataType:"json",
+					type: "post"	 
+				})
+				.done (function(data){
+					//console.log(data);
+					$("#container-pessoas").empty();
+					
+					data.forEach(function(d){	
+					
+						$("#container-pessoas").append(`<div>Id: ${d.id} Nome:  ${d.nome} Idade:  ${d.idade}`);
+					});	
+					
+				}).fail ( function(){
+					console.log("falha");
+				});
+			
+		}
+		
+		
+		function inserirPessoa(nome, idade){
+				$.ajax({
+					url: "Controller/Controller.php",
+					data: { "requisicao" : "inserirpessoa", 
+							"nome": nome, 
+							"idade": idade},
+					dataType:"json",
+					type: "post"	
+				})
+				.done (function(data){
+					if(data){
+						$("#container-pessoas").html("Pessoa inserida!");
+					}			
+				}).fail ( function(data ){
+					console.log("falha");
+					console.log(data);
+				});
+		
+		}
+		
+		
+		function deletarPessoa(id) {
+		
+			$.ajax({
+				url: "Controller/Controller.php",
+				data: {"requisicao" : "deletarpessoa", "id": id},
+				dataType:"json" ,
+					type: "post"	
+			})
+			.done (function(data){
+				if(data){
+					$("#container-pessoas").html("Pessoa deletada!");
+				}			
+			}).fail ( function(){
+				console.log("falha");
+			});
+			
+		}
+	
+	</script>
+</head>
+<body>
+
+	<div>
+		<h1>Inserir</h1>
+		Inserir possoa com o nome 
+		<input id="inp_nomepessoa"> e idade 
+		<input id="inp_idadepessoa">
+		<button id="bt_inspessoa"> inserir </button>
+	</div>
+
+	<div>
+		<h1>Deletar</h1>
+		Deletar pessoa de id <input id="inp_idpessoa">
+		<button id="bt_delpessoa"> deletar </button>
+	</div>
+
+	<div>
+		<h1>Get All</h1>
+		Pegar dados de todas Pessoas
+		<button id="bt_getallpessoas"> get all </button>
+		<div id="container-pessoas">
+		
+		</div>
+	</div>
+
+
+
+</body>
+</html>

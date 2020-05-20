@@ -14,7 +14,7 @@
 			$sql = 'INSERT INTO PESSOA(id, nome, idade) VALUES(null, 
 			"'.$this->pessoa->nome.'", '.$this->pessoa->idade.')';
 			$resultado = $mysqli->query( $sql );
-			
+
 			fecharConexao();
 			return $resultado;
 		}	
@@ -44,13 +44,12 @@
 			for($i = 0; $i  < count($row1); $i++){
 				
 				$p = new Pessoa( $row1[$i]["id"], $row1[$i]["nome"],$row1[$i]["idade"]);
-				echo $row1[$i]["id"]."<br>";
+				
 				array_push($array, $p);
 				
 			}
 			
 			fecharConexao();
-			
 			return $array;
 			
 		}

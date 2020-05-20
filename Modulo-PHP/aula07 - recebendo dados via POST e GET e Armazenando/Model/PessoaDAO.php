@@ -14,7 +14,7 @@
 			$sql = 'INSERT INTO PESSOA(id, nome, idade) VALUES(null, 
 			"'.$this->pessoa->nome.'", '.$this->pessoa->idade.')';
 			$resultado = $mysqli->query( $sql );
-			
+
 			fecharConexao();
 			return $resultado;
 		}	
